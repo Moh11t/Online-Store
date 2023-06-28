@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Shopping - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .ad{
+      margin-right: 3.5rem;
+    }
+    *{
+        font-family: 'Titillium Web', sans-serif;
+    }
+    /* Additional custom styles can be added here */
+  </style>
+</head>
+<body style=" background-image: url('game shopping 0.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: cover;">
+  <!-- Header section -->
+  <header style="background-color: rgb(17 24 39 / 75%);" class="bg-gray-900 text-white py-4">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <h1 class="text-2xl font-bold">Online Shopping</h1>
+      <nav>
+        <a href="index.html" class="df text-white hover:text-gray-300 px-4" style="display: none;">Log out</a>
+        <a onmouseover="myFun()" onmouseout="myFun1()" class="ad text-white hover:text-gray-300 px-4">Sign In</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section -->
+  <section class="text-white py-20" style="height: 80vh;">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4" style="font-size: 3rem; color: black;">Welcome to our Online Store</h2>
+      <p class="text-lg mb-8">Explore our wide range of products.</p>
+      <a href="products.html" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Explore Now</a>
+    </div>
+  </section>
+    <div onmouseover="myFun()"  onmouseout="myFun1()" class=" bl max-w-md w-1/4 p-6 bg-white rounded-lg shadow" style="display: none; position: absolute;left: 73vw; top: 2.8rem;">
+      <h2 class="text-2xl font-bold text-center mb-6">SIGN IN</h2>
+      <form>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+            E-mail id
+          </label>
+          <input class=" emailid shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="email" placeholder="Enter your Email-id" required>
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Password
+          </label>
+          <input class=" pass shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Enter your password" required>
+        </div>
+        <div class="flex items-center justify-between">
+          <input onclick="hi()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" value="Sign In">
+        </div>
+      </form>
+  </div>
+  <!-- Footer section -->
+  <footer class="bg-gray-900 text-white py-4" style="height: 11.4vh;">
+    <div class="container mx-auto text-center">
+      <p style="font-size: 1.4rem;">&copy; 2023 Online Shopping. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    function myFun(){
+      document.querySelector(".bl").style.display = "block";
+    }
+    function myFun1(){
+      document.querySelector(".bl").style.display = "none";
+    }
+    function hi() {
+      let he = document.querySelector(".emailid");
+    let yef = document.querySelector(".pass");
+    let userEmail = he.value;
+    let userPassword = yef.value;
+    console.log('Email: '+userEmail+'    password: '+userPassword);
+    let app = prompt("You've signed in ! What should we call you ?");
+    let app1 = app;
+    alert("Hi "+app1);
+    document.querySelector(".bl").style.display = "none";
+    document.querySelector(".ad").style.display = "none";
+    document.querySelector(".df").style.display = "block";
+    }
+  </script>
+</body>
+</html>
